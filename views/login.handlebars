@@ -1,0 +1,59 @@
+<section>
+
+  <div class="container" style="margin-top: 5rem;">
+
+
+
+
+    <form action="/posts/login" method="POST">
+      <div class="row d-flex justify-content-center align-items-center" style="height: 90vh;">
+        <div class="card" id="login-card">
+          {{!--  --}}
+          <div class="card-body text-center">
+
+            <div class="card-title">
+              <h1>Log in</h1>
+            </div>
+
+            <div class="form-group">
+
+              <div class="input-group mb-3">
+                <span class="input-group-prepend">
+                  <div class="input-group-text bg-transparent"><i class="fa fa-user"></i></div>
+                </span>
+                <input type="search" class="form-control" id="username" name="username" placeholder="Username" value={{username}}>
+              </div>
+
+              <div class="input-group mb-3">
+                <span class="input-group-prepend">
+                  <div class="input-group-text bg-transparent"><i class="fa fa-key"></i></div>
+                </span>
+                <input type="text" class="form-control" id="password" name="password" placeholder="Password" value={{password}}>
+              </div>
+
+              <input type="submit" value="Login" class="btn btn-dark mb-5" style="width: 100%;">
+
+              <div>
+                <p>Don't have an account? <span><a href="./register">Sign up</a></span></p>
+                <a href="./register">Forgot your password?</a>
+              </div>
+            </div>
+          </div>
+          {{!--  --}}
+          <div class="row d-flex justify-content-center">
+            {{#each errors}}
+            <div class="error">
+              <p class="text-danger">{{text}}</p>
+            </div>
+            {{/each}}
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </form>
+  </div>
+
+</section>

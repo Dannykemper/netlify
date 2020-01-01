@@ -1,0 +1,21 @@
+<section class="container" id="users">
+  <h1>All users</h1>
+
+  {{#each posts}}
+  <div class="card my-4">
+    <div class="card-body">
+      <h3 class="card-title">{{register.username}} (user: {{register.id}}) </h3>
+      {{!-- <p class="card-text">{{fname}} {{lname}}</p> --}}
+      <p class="card-text">"{{description}}"</p>
+      {{!-- <p class="card-text">Password: {{password}}</p> --}}
+      <small class="card-text">Toegevoegd op: {{createdAt}}</small>
+    </div>
+  </div>
+
+
+  {{else}}
+  <p>No users found</p>
+
+  {{/each}}
+
+</section>
